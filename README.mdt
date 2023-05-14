@@ -1,0 +1,63 @@
+
+Special characters := {", *, _ , / , < , >, | , ...}
+
+Underline :
+This works for cases in which if a string needs to be italicized all the spaces included in the string should be replaced with '' for example _Pravar_Kataria_
+will produce "Pravar Kataria" underlined.
+The underline will not works across multiple lines. A line break will end underline tag.
+The underline can be intertwined with bold or italics
+ 
+Bold and Italics :
+Bold and Italics are both implemented by the same operator '*' and therefore we have to check the largest possible 'chunk' (either '**' if it exists or '*' if 2 stars do not occur consecutively)
+The bold and italics both work intertwined.
+
+Escape character : 
+Because the special characters cannot be typed directly in a md, escape character '\' is used before a special character which helps to print the special character as it is ignoring its functionalities as markdown.
+This works for bold, italics, tables, links, underline, horizontal rule etc.
+
+Paragraph : 
+The paragraph tags are both ended and initiated with an empty line consisting of only "\n" 
+These are tags that preserve the text structure of the code.
+
+Tables :
+This are implemented by starting a table with "<<" 
+and they end with ">>"
+The columns can be taken  
+NOTE : The line should contain only '<' character and not any other character for proper syntax
+
+Lists : 
+The lists are of 2 types ordered and unordered
+ordered implemented by a number followed by a decimal point
+NOTE : Nesting of the lists will not occur
+
+Links :
+Links are also of 2 types 
+a) Of the type '<' link '>' (using )
+b) Using [ a ] (b) where a contains the link URL and the b contains the text to be hyperlinked.
+
+Block quotes :
+The block quotes '>' differed from the table ending as table endings will occur only after table opening. And it has the precedence lower than table closing. Block quotes need not be one in a line. consecutive > define how many blockquote need to be added.
+
+Code Blocks :
+Code blocks are the text that are indicated by atleast 7 spaces. 1 tab is equivalent to 4 spaces.
+A total of 7 spaces will trigger a codeblock.
+For each line to be 'codeblocked' 7 spaces need to be.
+No code / tags run in the code blocks.
+
+Headings :
+Headings are taken care by beginning hashtags at the starting of a line. The number of hashtag tells the heading tag.
+There need not be any space between ###ok is also correct and ### ok is also correct and produces the word ok in heading size h3.
+NOTE : Do not add more than 7 hashtags otherwise error might appear
+
+Horizontal Rule :
+any 3 "---" in the file will be replaced with horizontal rule across the screen. 
+The 3 hyphens need not come in a separate line.
+Also 4 hyphens will give a horizontal line and 1 additional '-'
+
+
+GENERAL RULE : 
+For proper syntax , add closing 'brackets' to opening brackets. For example add ">>" to close the table after opening it with "<<"
+
+
+-PRAVAR KATARIA
+-2021CS10075
